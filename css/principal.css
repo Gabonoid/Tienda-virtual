@@ -1,0 +1,43 @@
+* {
+	margin: o;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: url("../img/bg.png") no-repeat fixed;
+	background-position: center;
+	background-size: cover;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+}
+
+/* Banner Promocion */
+
+.banner_promocion {
+	color: #fff;
+	background-color: #000;
+	position: absolute;
+	width: 100%;
+	padding: 6px;
+	margin-top: 28px;
+	text-align: center;
+	font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner_promocion img {
+    margin-right: 5px;
+}
+
+.pesos {
+	font-weight: 200;
+    font-size: 12px;
+}
+
+.precio {
+	font-weight: 200;
+    font-size: 16px;
+}
