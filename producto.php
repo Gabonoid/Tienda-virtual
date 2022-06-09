@@ -9,6 +9,10 @@
     <title>Producto</title>
 </head>
 <h1 class="banner_promocion"> <img src="./img/coche_icon.png" alt="icono_coche"> Envios gratis <span class="pesos">+MXN<span class="precio">499</span></span></h1>
+<?php
+include('./includes/nav.php');
+echo $navMenu;
+?>
 <body>
     
 </body>
