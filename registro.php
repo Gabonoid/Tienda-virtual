@@ -15,22 +15,29 @@ if (isset($_SESSION['usuario'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/login.css" />
     <link rel="icon" href="./img/favicon.png">
     <title>Registro</title>
 </head>
 
 <body>
-    <form method="post">
-        <input type="text" placeholder="Nombre" name="nombre" required>
-        <input type="text" placeholder="Apellidos" name="apellido" required>
-        <input type="number" name="numTelefono" id="numTelefono" placeholder="Teléfono" required>
-        <input type="text" placeholder="Dirección" name="direccion" required>
-        <input type="email" name="correo" id="correo" placeholder="correo@dominio.com" required>
-        <input type="password" name="password" id="password" placeholder="Contraseña" required>
-        <input type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirma tu contraseña" required>
-        <button type="submit" name="registar">Registrarse</button>
 
-    </form>
+    <div class="container">
+        <img src="./img/logo_nombre.png" alt="logo" />
+        <div class="formulario">
+            <form method="post">
+                <input class="input_entrada" type="text" placeholder="Nombre" name="nombre" required>
+                <input class="input_entrada" type="text" placeholder="Apellidos" name="apellido" required>
+                <input class="input_entrada" type="number" name="numTelefono" id="numTelefono" placeholder="Teléfono" required>
+                <input class="input_entrada" type="text" placeholder="Dirección" name="direccion" required>
+                <input class="input_entrada" type="email" name="correo" id="correo" placeholder="correo@dominio.com" required>
+                <input class="input_entrada" type="password" name="password" id="password" placeholder="Contraseña" required>
+                <input class="input_entrada" type="password" name="passwordConfirm" id="passwordConfirm" placeholder="Confirma tu contraseña" required>
+                <button class="btn_primary" type="submit" name="registar">Registrarse</button>
+
+            </form>
+        </div>
+    </div>
 
     <?php
     if (isset($_POST['registar'])) {
@@ -55,8 +62,6 @@ if (isset($_SESSION['usuario'])) {
         }
     }
     ?>
-
-
 
 </body>
 
