@@ -20,6 +20,8 @@ if (isset($_SESSION['usuario'])) {
     <title>Registro</title>
 </head>
 
+<a href="./login.php" class="btn_primary btn_back">Ya tengo una cuenta</a>
+
 <body>
 
     <div class="container">

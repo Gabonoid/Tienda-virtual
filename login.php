@@ -26,6 +26,8 @@ $_SESSION['correo'];
     <title>Login</title>
 </head>
 
+<a href="./index.php" class="btn_primary btn_back">Regresar</a>
+
 <body>
     <div class="container">
         <img src="./img/logo_nombre.png" alt="logo" />
@@ -82,7 +84,7 @@ $_SESSION['correo'];
 
             ?>
             <a href="#" class="btn_secondary">¿Olvidaste tu contraseña?</a>
-            <a href="#" class="btn_secondary">Registrarme</a>
+            <a href="./registro.php" class="btn_secondary">Registrarme</a>
 
         </div>
     </div>
