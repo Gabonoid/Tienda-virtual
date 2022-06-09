@@ -27,11 +27,6 @@ echo $navMenu;
 
 <body>
 
-    <br><br><br>
-    <a href="./perfil.php">Perfil</a>
-    <br>
-    <a href="./login.php">Entrar</a>
-
 </body>
 
 </html>
