@@ -69,8 +69,10 @@ $_SESSION['correo'];
 
                             $_SESSION['correo'] = $row['correo'];
                             $_SESSION['usuario'] = $row['nombre'];
+                            $_SESSION['apellido'] = $row['apellido'];
                             $_SESSION['id'] = $row['idPersona'];
                             $_SESSION['telefono'] = $row['telefono'];
+                            $_SESSION['direccion'] = $row['direccion'];
 
 
 
