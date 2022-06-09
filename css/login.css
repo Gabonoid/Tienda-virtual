@@ -89,6 +89,13 @@ form {
 	margin: 6px;
 }
 
+.btn_back{
+    position: absolute;
+    top:5px;
+    left: 0px;
+    width: 100px;
+}
+
 .btn_primary:hover {
 	color: #fff;
 	background-color: rgb(71, 71, 71);
