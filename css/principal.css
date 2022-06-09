@@ -1,5 +1,5 @@
 * {
-	margin: o;
+	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
@@ -12,32 +12,94 @@ body {
 	font-size: 18px;
 }
 
+.input_entrada {
+	width: 100%;
+	background-color: #fff;
+	border-radius: 30px;
+	border: 2px solid #7d7d7d;
+	padding: 6px 12px;
+	margin: 6px;
+}
+
 /* Banner Promocion */
 
 .banner_promocion {
 	color: #fff;
 	background-color: #000;
 	position: absolute;
+	top: 0px;
 	width: 100%;
-	padding: 6px;
-	margin-top: 28px;
 	text-align: center;
 	font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .banner_promocion img {
-    margin-right: 5px;
+	margin-right: 5px;
 }
 
 .pesos {
 	font-weight: 200;
-    font-size: 12px;
+	font-size: 12px;
 }
 
 .precio {
 	font-weight: 200;
-    font-size: 16px;
+	font-size: 16px;
+}
+
+/* Nav */
+
+nav {
+	margin: auto;
+	width: 95%;
+	max-width: 1300px;
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav_right,
+.nav_left {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav_link {
+	margin: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav_link a {
+	text-decoration: none;
+	margin: 4px;
+	color: #000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nav_link img {
+	margin-right: 4px;
+}
+
+.nav_link a:hover {
+	text-decoration: underline;
+}
+
+.btn_search {
+	background: url("../img/search_icon.png") no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	border: none;
+	width: 40px;
+	height: 30px;
+	border-radius: 30px;
+	background-color: #000;
 }
