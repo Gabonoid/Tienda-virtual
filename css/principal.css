@@ -12,6 +12,17 @@ body {
 	font-size: 18px;
 }
 
+.container{
+	margin: auto;
+	width: 90%;
+	max-width: 1200px;
+}
+
+.container p{
+	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
 .input_entrada {
 	width: 100%;
 	background-color: #fff;
