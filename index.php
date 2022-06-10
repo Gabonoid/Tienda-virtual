@@ -26,7 +26,7 @@ echo $navMenu;
 ?>
 
 <body>
-
+    <a href="./producto.php">Producto</a>
 </body>
 
 </html>

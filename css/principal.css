@@ -16,10 +16,16 @@ body {
 	margin: auto;
 	width: 90%;
 	max-width: 1200px;
+	border: 4px solid #0051ff;
 }
 
 .container p{
 	margin-left: 20px;
+	margin-bottom: 20px;
+}
+
+.container h3{
+	margin-left: 10px;
 	margin-bottom: 20px;
 }
 
