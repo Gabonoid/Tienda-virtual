@@ -48,6 +48,33 @@
     width: 100px;
 }
 
+.btn_agregar{
+	text-decoration: none;
+	border: none;
+	text-align: center;
+	font-size: 12px;
+	background-color: #FFCB13;
+	border-radius: 30px;
+	color: #000;
+	padding: 8px;
+	font-weight: 800;
+	text-transform: uppercase;
+	width: 120px;
+	max-width: 260px;
+	text-align: center;
+	margin: 6px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 900;
+	margin: auto;
+}
+
+.btn_agregar img{
+	width: 20px;
+	margin-right: 6px;
+}
+
 .btn_primary:hover {
 	color: #fff;
 	background-color: rgb(71, 71, 71);
