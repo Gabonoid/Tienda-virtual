@@ -1,0 +1,19 @@
+.card{
+    margin: auto;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.clothes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.img_ropa{
+    margin-top: 24px;
+    width: 150px;
+}
