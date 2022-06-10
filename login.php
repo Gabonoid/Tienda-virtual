@@ -73,6 +73,7 @@ $_SESSION['correo'];
                             $_SESSION['id'] = $row['idPersona'];
                             $_SESSION['telefono'] = $row['telefono'];
                             $_SESSION['direccion'] = $row['direccion'];
+                            $_SESSION['carrito'] = array();
 
 
 
@@ -85,7 +86,6 @@ $_SESSION['correo'];
             }
 
             ?>
-            <a href="#" class="btn_secondary">¿Olvidaste tu contraseña?</a>
             <a href="./registro.php" class="btn_secondary">Registrarme</a>
 
         </div>

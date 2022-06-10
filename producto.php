@@ -1,3 +1,8 @@
+<?php
+session_start();
+include("./includes/Articulo.php");
+$idArticulo = $_GET['art'];
+?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -16,37 +21,44 @@
 include('./includes/nav.php');
 echo $navMenu;
 ?>
+<?php
+include("./includes/connect.php");
+$consultaRopa = "SELECT * FROM ropa WHERE idarticulo = " . $idArticulo;
+$queryRopa = mysqli_query($connect, $consultaRopa);
+$row = mysqli_fetch_array($queryRopa);
+?>
 
 <body>
     <div class="container_info">
         <div class="img_ropa">
-            <img src="./img/Ropa_1.png" alt="">
+            <?php echo '<img src="data:image/png;base64,' . base64_encode($row['foto']) . '" />' ?>
         </div>
         <div class="info">
-            <h1>Nombre del Producto</h1>
+            <h1><?php echo $row['nombre']; ?></h1>
             <h3>Descripción:</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio repellat cum, soluta sapiente quibusdam voluptatibus debitis maxime totam in iusto earum dolorum nesciunt repellendus reiciendis asperiores quisquam impedit omnis eum Mollitia voluptates quibusdam reprehenderit unde ad aperiam explicabo quo illum, corrupti iure earum maiores. Sint delectus minus deleniti repellat dolorem optio. Unde, sapiente explicabo obcaecati corrupti perferendis omnis rem voluptatem.</p>
-            <h1 class="precio_ropa">$$$Precio</h1>
-            
-            <select name="talla" id="talla">
-                <option value="">--Talla--</option>
-                <option value="chico">Chica</option>
-                <option value="mediana">Mediana</option>
-                <option value="grande">Grande</option>
-            </select>
-            <select name="cantidad" id="cantidad">
-                <option value="">--Cantidad--</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-            </select>
-            <button class="btn_agregar"> <img src="./img/cart_icon.png" > Agregar</button>
+            <h1 class="precio_ropa">$<?php echo $row['precio']; ?></h1>
+
+            <form method="post">
+                <select name="talla" id="talla">
+                    <option value="chico">Chica</option>
+                    <option value="mediana">Mediana</option>
+                    <option value="grande">Grande</option>
+                </select>
+                <button type="submit" name="agregar_carrito"" class=" btn_agregar"> <img src="./img/cart_icon.png">Agregar</button>
+            </form>
+
+            <?php
+
+            if (isset($_POST['agregar_carrito'])) {
+                $carrito_mio = $_SESSION['carrito'];
+                $carrito_mio[] = array("id" => $idArticulo, "talla" => $_POST['talla']);
+                $_SESSION['carrito'] = $carrito_mio;
+                
+                header('Location: index.php');
+            }
+
+            ?>
         </div>
     </div>
 </body>
